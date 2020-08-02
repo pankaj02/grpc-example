@@ -5,8 +5,10 @@ import com.example.hello.HelloResponse;
 import com.example.hello.HelloServiceGrpc;
 import io.grpc.stub.StreamObserver;
 import lombok.extern.slf4j.Slf4j;
+import net.devh.boot.grpc.server.service.GrpcService;
 
 @Slf4j
+@GrpcService
 public class HelloService extends HelloServiceGrpc.HelloServiceImplBase {
 
     @Override
