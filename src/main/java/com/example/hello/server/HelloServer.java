@@ -1,6 +1,6 @@
-package com.slb.api_gateway.server;
+package com.example.hello.server;
 
-import com.slb.api_gateway.service.HelloService;
+import com.example.hello.service.HelloService;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import lombok.extern.slf4j.Slf4j;
@@ -25,13 +25,13 @@ public class HelloServer {
         Runtime.getRuntime().addShutdownHook(new Thread(()-> {
             try {
                 this.stop();
-            } catch (IOException | InterruptedException e) {
+            } catch ( InterruptedException e) {
                 e.printStackTrace();
             }
         }));
     }
 
-    private void stop() throws IOException, InterruptedException {
+    private void stop() throws InterruptedException {
         log.info("Stopping Server..");
         if(server !=null) {
             server.shutdown().awaitTermination(30, TimeUnit.SECONDS);

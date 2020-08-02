@@ -1,8 +1,8 @@
-package com.slb.api_gateway.service;
+package com.example.hello.service;
 
-import com.slb.gateway.HelloRequest;
-import com.slb.gateway.HelloResponse;
-import com.slb.gateway.HelloServiceGrpc;
+import com.example.hello.HelloRequest;
+import com.example.hello.HelloResponse;
+import com.example.hello.HelloServiceGrpc;
 import io.grpc.stub.StreamObserver;
 import lombok.extern.slf4j.Slf4j;
 
